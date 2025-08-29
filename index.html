@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>한생 The Archive | 마인크래프트 서버 & 한생 Family 멤버십</title>
+  <meta name="description" content="한생 The Archive — 마인크래프트 서버 공식 사이트. 서버 소개, 접속 정보, 디스코드, 공지, 한생 Family 멤버십 안내."/>
+  <meta property="og:title" content="한생 The Archive" />
+  <meta property="og:description" content="마인크래프트 서버 & 한생 Family 멤버십" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="" />
+  <meta name="theme-color" content="#111827" />
+
+  <!-- Pretendard (Korean UI font) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Pretendard', 'system-ui', 'sans-serif'] },
+          colors: {
+            brand: {
+              50: '#eff6ff', 100: '#dbeafe', 200: '#bfdbfe', 300: '#93c5fd',
+              400: '#60a5fa', 500: '#3b82f6', 600: '#2563eb', 700: '#1d4ed8',
+              800: '#1e40af', 900: '#1e3a8a'
+            },
+            pixel: '#16a34a'
+          },
+          boxShadow: { soft: '0 10px 30px rgba(0,0,0,.15)' }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Simple noise background */
+    .noise { position: fixed; inset: 0; pointer-events: none; opacity: .06; background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="140" height="140" viewBox="0 0 140 140"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23n)" opacity="0.4"/></svg>'); }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased">
+  <div class="noise"></div>
+  <!-- NAV -->
+  <header class="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-slate-950/60">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="#home" class="flex items-center gap-3 group">
+          <span class="inline-block h-8 w-8 rounded-md bg-gradient-to-br from-brand-400 to-pixel grid place-items-center shadow-soft">
+            <!-- Pixel-style H logo -->
+            <svg viewBox="0 0 24 24" class="h-5 w-5 text-slate-900"><path fill="currentColor" d="M3 3h4v4H3V3zm0 7h4v4H3v-4zm0 7h4v4H3v-4zM10 3h4v4h-4V3zm0 7h4v4h-4v-4zm0 7h4v4h-4v-4zM17 3h4v4h-4V3zm0 7h4v4h-4v-4zm0 7h4v4h-4v-4z"/></svg>
+          </span>
+          <span class="text-lg font-semibold tracking-tight">한생 The Archive</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-6 text-sm text-slate-300">
+          <a href="#about" class="hover:text-white">서버소개</a>
+          <a href="#connect" class="hover:text-white">접속정보</a>
+          <a href="#news" class="hover:text-white">공지</a>
+          <a href="#membership" class="hover:text-white">한생 Family</a>
+          <a href="#faq" class="hover:text-white">FAQ</a>
+          <a href="#contact" class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-brand-500 hover:bg-brand-400 text-white">디스코드</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="relative overflow-hidden">
+    <div class="absolute inset-0 -z-10 bg-gradient-to-b from-slate-900 via-slate-900 to-slate-950"></div>
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 md:py-28">
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">
+            마인크래프트 서버 <span class="text-brand-400">한생 The Archive</span>
+          </h1>
+          <p class="mt-5 text-slate-300 text-lg leading-relaxed">
+            한 곳에 모은 우리의 기록과 추억. 생존(Survival) 중심의 커뮤니티 서버에서
+            함께 건축하고 모험하며 <span class="text-brand-300 font-semibold">한생 Family 멤버십</span>으로 더 많은 혜택을 누리세요.
+          </p>
+          <div class="mt-7 flex flex-wrap gap-3">
+            <a href="#connect" class="px-5 py-3 rounded-xl bg-brand-500 hover:bg-brand-400 text-white font-semibold shadow-soft">지금 접속하기</a>
+            <a href="#membership" class="px-5 py-3 rounded-xl border border-slate-700 hover:border-slate-500 text-slate-200">멤버십 보기</a>
+          </div>
+          <div class="mt-6 text-sm text-slate-400">지원 버전: <span class="font-mono bg-slate-800/60 px-2 py-1 rounded">1.12 ~ 1.21.5</span> · 모드 없이 플레이 가능</div>
+        </div>
+        <div class="relative">
+          <div class="aspect-[4/3] rounded-2xl bg-slate-900/60 border border-slate-800 shadow-soft grid place-items-center">
+            <!-- Decorative pixel blocks -->
+            <div class="grid grid-cols-8 gap-1 p-6">
+              <div class="h-6 w-6 bg-pixel/80"></div>
+              <div class="h-6 w-6 bg-brand-600"></div>
+              <div class="h-6 w-6 bg-emerald-600"></div>
+              <div class="h-6 w-6 bg-lime-600"></div>
+              <div class="h-6 w-6 bg-pixel/80"></div>
+              <div class="h-6 w-6 bg-brand-600"></div>
+              <div class="h-6 w-6 bg-emerald-600"></div>
+              <div class="h-6 w-6 bg-lime-600"></div>
+            </div>
+            <p class="absolute bottom-3 right-4 text-xs text-slate-400">이미지는 예시입니다.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="py-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="md:col-span-2">
+          <h2 class="text-2xl md:text-3xl font-bold">서버 소개</h2>
+          <p class="mt-4 text-slate-300 leading-relaxed">
+            <strong>한생 The Archive</strong>는 깔끔한 생존 환경과 안정적인 경제 시스템,
+            그리고 기록과 전시를 중시하는 갤러리 구역이 특징입니다. 주간 이벤트, 시즌별 건축 공모, 플레이어 상점 등 커뮤니티 중심 콘텐츠를 제공합니다.
+          </p>
+          <ul class="mt-6 grid sm:grid-cols-2 gap-3 text-sm text-slate-300">
+            <li class="flex items-start gap-2"><span class="mt-1 h-2 w-2 rounded-full bg-brand-400"></span>라이트 반달치 방지 & 비정품 차단</li>
+            <li class="flex items-start gap-2"><span class="mt-1 h-2 w-2 rounded-full bg-brand-400"></span>월드 백업 & 롤백 지원</li>
+            <li class="flex items-start gap-2"><span class="mt-1 h-2 w-2 rounded-full bg-brand-400"></span>플레이어 경제(경매/상점) & 커뮤니티 규칙</li>
+            <li class="flex items-start gap-2"><span class="mt-1 h-2 w-2 rounded-full bg-brand-400"></span>로그 기반 신고/중재 시스템</li>
+          </ul>
+        </div>
+        <aside class="bg-slate-900/50 border border-slate-800 rounded-2xl p-6 h-fit">
+          <h3 class="font-semibold">운영 정보</h3>
+          <dl class="mt-4 space-y-3 text-sm">
+            <div class="flex justify-between"><dt class="text-slate-400">운영시간</dt><dd>24시간 (점검 시 사전 공지)</dd></div>
+            <div class="flex justify-between"><dt class="text-slate-400">서버 지역</dt><dd>KR,Ansan (저지연)</dd></div>
+            <div class="flex justify-between"><dt class="text-slate-400">불가행위</dt><dd>핵/버그악용/혐오발언</dd></div>
+            <div class="flex justify-between"><dt class="text-slate-400">문의</dt><dd><a class="underline hover:text-white" href="#contact">디스코드</a></dd></div>
+          </dl>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONNECT -->
+  <section id="connect" class="py-20 bg-gradient-to-b from-slate-900/60 to-slate-950">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <div>
+          <h2 class="text-2xl md:text-3xl font-bold">접속 정보</h2>
+          <p class="mt-3 text-slate-300">아래 주소를 마인크래프트 멀티플레이에 추가하세요.</p>
+
+          <div class="mt-5 bg-slate-900/60 border border-slate-800 rounded-2xl p-5">
+            <div class="text-sm text-slate-400">서버 주소</div>
+            <div class="mt-1 flex items-center gap-3">
+              <code id="serverIp" class="text-lg md:text-xl font-mono bg-slate-800/60 rounded px-2 py-1">hshost.serveminecraft.net</code>
+              <button id="copyBtn" class="px-3 py-1.5 text-sm rounded-lg bg-brand-600 hover:bg-brand-500">복사</button>
+            </div>
+            <div class="mt-4 grid sm:grid-cols-2 gap-4 text-sm">
+              <div class="bg-slate-900/70 rounded-xl p-4 border border-slate-800">
+                <div class="text-slate-400">지원 버전</div>
+                <div class="font-semibold">Java 1.12 ~ 1.21.5</div>
+              </div>
+              <div class="bg-slate-900/70 rounded-xl p-4 border border-slate-800">
+                <div class="text-slate-400">서버 상태</div>
+                <div id="statusText" class="font-semibold">온라인</div>
+              </div>
+            </div>
+            <p class="mt-3 text-xs text-slate-500">* 실제 상태 연동은 별도 API가 필요합니다. (ex. mcsrvstat.us)</p>
+          </div>
+        </div>
+        <div class="bg-slate-900/50 border border-slate-800 rounded-2xl p-6">
+          <h3 class="font-semibold">커뮤니티 연결</h3>
+          <ul class="mt-4 space-y-3 text-slate-300">
+            <li>디스코드: <a class="underline hover:text-white" href="https://discord.gg/ED9Te2X67f" target="_blank" rel="noreferrer">https://discord.gg/ED9Te2X67f</a></li>
+            <li>규칙: 친절/존중/공정 — 분쟁 발생 시 스태프 중재</li>
+            <li>문의: 관리자 @siwon2da.</li>
+          </ul>
+          <a href="https://discord.gg/ED9Te2X67f" target="_blank" rel="noreferrer" class="mt-6 inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 font-semibold">디스코드 참여</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWS -->
+  <section id="news" class="py-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between">
+        <h2 class="text-2xl md:text-3xl font-bold">공지 & 업데이트</h2>
+        <a class="text-sm text-slate-400 hover:text-white" href="#">전체보기 →</a>
+      </div>
+      <div class="mt-8 grid md:grid-cols-3 gap-6">
+        <article class="rounded-2xl border border-slate-800 bg-slate-900/50 p-6">
+          <div class="text-xs text-slate-400">2025-08-29</div>
+          <h3 class="mt-1 font-semibold">정식 오픈 예고</h3>
+          <p class="mt-2 text-slate-300 text-sm">지형 리셋은 정식 출시전 시행됩니다.</p>
+        </article>
+        <article class="rounded-2xl border border-slate-800 bg-slate-900/50 p-6">
+          <div class="text-xs text-slate-400">2025-08-20</div>
+          <h3 class="mt-1 font-semibold">경제 밸런스 조정</h3>
+          <p class="mt-2 text-slate-300 text-sm">상점 수수료 5% → 3%, 초반 물가 완화.</p>
+        </article>
+        <article class="rounded-2xl border border-slate-800 bg-slate-900/50 p-6">
+          <div class="text-xs text-slate-400">2025-08-10</div>
+          <h3 class="mt-1 font-semibold">반달행위 제재 정책</h3>
+          <p class="mt-2 text-slate-300 text-sm">의도/규모에 따라 단계별 제재. 상세는 디스코드 공지 참고.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- MEMBERSHIP -->
+  <section id="membership" class="py-20 bg-gradient-to-b from-slate-900/60 to-slate-950">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto">
+        <h2 class="text-2xl md:text-3xl font-bold">한생 Family 멤버십</h2>
+        <p class="mt-3 text-slate-300">서버 유지비와 커뮤니티 활동을 후원하고, 전용 혜택을 받아보세요.</p>
+      </div>
+      <div class="mt-10 grid md:grid-cols-3 gap-6">
+        <!-- Free -->
+        <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6">
+          <h3 class="text-lg font-semibold">Free</h3>
+          <p class="mt-1 text-slate-400 text-sm">모두에게 열려 있어요</p>
+          <div class="mt-4 text-3xl font-extrabold">₩0<span class="text-base font-medium text-slate-400">/월</span></div>
+          <ul class="mt-4 space-y-2 text-sm text-slate-300">
+            <li>• 기본 접속 & 플레이</li>
+            <li>• 커뮤니티 채널 이용</li>
+            <li>• 월 1회 빌드 스크린샷 전시</li>
+          </ul>
+          <a href="#contact" class="mt-6 inline-flex px-4 py-2 rounded-xl border border-slate-700 hover:border-slate-500">시작하기</a>
+        </div>
+        <!-- Standard -->
+        <div class="rounded-2xl border-2 border-brand-500 bg-slate-900/60 p-6 shadow-soft">
+          <div class="inline-flex items-center gap-2 text-xs px-2 py-1 rounded-full bg-brand-600/30 text-brand-200">추천</div>
+          <h3 class="mt-2 text-lg font-semibold">Standard</h3>
+          <p class="mt-1 text-slate-400 text-sm">편의 & 커뮤니티 혜택</p>
+          <div class="mt-4 text-3xl font-extrabold">₩4,900<span class="text-base font-medium text-slate-400">/월</span></div>
+          <ul class="mt-4 space-y-2 text-sm text-slate-300">
+            <li>• 인게임 칭호 무료</li>
+          </ul>
+          <a href="#contact" class="mt-6 inline-flex px-4 py-2 rounded-xl bg-brand-600 hover:bg-brand-500 font-semibold">가입하기</a>
+        </div>
+          <a href="#contact" class="mt-6 inline-flex px-4 py-2 rounded-xl border border-slate-700 hover:border-slate-500">문의하기</a>
+        </div>
+      </div>
+      <p class="mt-6 text-xs text-slate-500">* 멤버십은 서버 운영비에 사용되며, 모든 혜택은 공지 없이 조정될 수 있습니다.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-20">
+    <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold">자주 묻는 질문</h2>
+      <div class="mt-8 grid md:grid-cols-2 gap-6">
+        <div class="rounded-xl border border-slate-800 bg-slate-900/50 p-5">
+          <h3 class="font-semibold">리소스팩이 필요하신가요?</h3>
+          <p class="mt-2 text-slate-300 text-sm">리소스팩은 디스코드에서 배포합니다.</p>
+        </div>
+        <div class="rounded-xl border border-slate-800 bg-slate-900/50 p-5">
+          <h3 class="font-semibold">규칙 위반 신고는 어떻게 하나요?</h3>
+          <p class="mt-2 text-slate-300 text-sm">디스코드 <em>#문의하기</em> 채널을 이용해주세요.</p>
+        </div>
+        <div class="rounded-xl border border-slate-800 bg-slate-900/50 p-5">
+          <h3 class="font-semibold">서버가 꺼져 있어요.</h3>
+          <p class="mt-2 text-slate-300 text-sm">점검 또는 장애일 수 있습니다. 공지 채널을 확인해주세요.</p>
+        </div>
+        <div class="rounded-xl border border-slate-800 bg-slate-900/50 p-5">
+          <h3 class="font-semibold">후원 영수증이 필요해요.</h3>
+          <p class="mt-2 text-slate-300 text-sm">디스코드에서 관리자에게 문의하시면 현금영수증 발급 안내드립니다.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT / FOOTER -->
+  <footer id="contact" class="py-16 border-t border-slate-800 bg-slate-950">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-3 gap-8">
+        <div>
+          <div class="flex items-center gap-3">
+            <span class="inline-block h-8 w-8 rounded-md bg-gradient-to-br from-brand-400 to-pixel grid place-items-center">
+              <svg viewBox="0 0 24 24" class="h-5 w-5 text-slate-900"><path fill="currentColor" d="M3 3h4v4H3V3zm0 7h4v4H3v-4zm0 7h4v4H3v-4zM10 3h4v4h-4V3zm0 7h4v4h-4v-4zm0 7h4v4h-4v-4zM17 3h4v4h-4V3zm0 7h4v4h-4v-4zm0 7h4v4h-4v-4z"/></svg>
+            </span>
+            <span class="font-semibold">한생 The Archive</span>
+          </div>
+          <p class="mt-3 text-sm text-slate-400">© <span id="year"></span> Hansang Archive. 모든 권리 보유.</p>
+        </div>
+        <div>
+          <h4 class="font-semibold">바로가기</h4>
+          <ul class="mt-3 space-y-2 text-sm text-slate-300">
+            <li><a href="#about" class="hover:text-white">서버소개</a></li>
+            <li><a href="#connect" class="hover:text-white">접속정보</a></li>
+            <li><a href="#membership" class="hover:text-white">한생Family 멤버십</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold">연락처</h4>
+          <ul class="mt-3 space-y-2 text-sm text-slate-300">
+            <li>이메일: hshta0428@gmail.com</li>
+            <li>디스코드: https://discord.gg/ED9Te2X67f</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold">사업자</h4>
+          <ul class="mt-3 space-y-2 text-sm text-slate-300">
+            <li>대표자 신예성</li>
+            <li>사업자번호: 415-37-01401</li>
+            <li>디스코드: discord.gg/ED9Te2X67f</li>
+            <a href="https://www.ftc.go.kr/bizCommPop.do?wrkr_no=4153701401&amp;apv_perm_no=" target="blank">[사업자정보확인]</a>
+            <script>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Copy IP
+    document.getElementById('copyBtn').addEventListener('click', () => {
+      const ip = document.getElementById('serverIp').innerText.trim();
+      navigator.clipboard.writeText(ip).then(() => {
+        const btn = document.getElementById('copyBtn');
+        const old = btn.innerText; btn.innerText = '복사됨!';
+        setTimeout(() => btn.innerText = old, 1200);
+      });
+    });
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
